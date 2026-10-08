@@ -320,10 +320,11 @@ def check_one(node, session):
     out["exit"] = None
     out["residential"] = "unknown"
     try:
-        r = session.get(url, timeout=CHECK_TIMEOUT, headers={"User-Agent": "Mozilla/5.0 (gate-checker)"})
+        r = session.get(url, timeout=CHECK_TIMEOUT, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
         if r.status_code != 200:
-            out["error"] = f"HTTP {r.status_code}"
+            out["error"] = f"HTTP {r.status_code} - {r.text[:100]}"
             out["worker_error"] = True
+            print(f"[DEBUG 响应异常] 节点: {node['host']} | 状态码: {r.status_code} | 内容: {r.text[:100]}", flush=True)
             return out
         j = r.json()
         ok = bool(j.get("success"))
