@@ -460,8 +460,16 @@ EDGE_HOSTS = [
     h.strip()
     for h in os.environ.get(
         "EDGE_HOSTS",
-        "saas.072159.xyz:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
+        "saas.sin.fan:443,www.wuduanyun.com:443,cf.877774.xyz:443,auto.dolby.dpdns.org:443",
+        "saas.072159.xyz:443,cf.xreak.top:443,cf.92555.xyz:443",
+        "vps.cheng2001.top:443,p.etime.vip:443,cdn.ctn32.us.kg:443",
+        "cdn.667891.xyz:443,www.mfyx.cn:443,cf.nyanya.moe:443",
+        "224322.xyz:443,img.856518.xyz:443,cf.itv888.cn:443",
+        "fn.130519.xyz:443,cdn.7zz.cn:443,tt.78607323.xyz:443",
+        "cloudflare.idc.rocks:443,bbs.alipansou.com:443,cdn.204910.best:443",
+        "thebeat.gehealthcare.com:443,uspto.gov:443,cf.3666888.xyz:443",
+        "wppaunz.com:443,api.gzcrtw.com:443,www.udacity.com:443",
+        "prizepicks.com:443,www.gov.il:443,ali.nonull.pp.ua:443",
     ).split(",")
     if h.strip()
 ]
@@ -522,8 +530,8 @@ def build_hosts_text(data):
 
 
 # edgetunnel 完整订阅 (vless://) 配置
-EDT_UUID = os.environ.get("EDT_UUID", "90c14586-42a5-4c30-959d-8b36608d67f7")
-EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "ed.xiaolei.qzz.io")
+EDT_UUID = os.environ.get("EDT_UUID", "8e3a64c6-1e4c-4dec-b2f6-899e3b756b9a")
+EDT_DOMAIN = os.environ.get("EDT_DOMAIN", "orange-sunset-cf0b.wudf7258.workers.dev")
 EDT_FINGERPRINT = os.environ.get("EDT_FINGERPRINT", "chrome")
 SUB_URL = os.environ.get("SUB_URL", "https://jerylihub.github.io/gate/sub.txt")
 
